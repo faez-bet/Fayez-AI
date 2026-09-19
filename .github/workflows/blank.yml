@@ -1,0 +1,17 @@
+name: تشغيل فايز
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  تشغيل:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: جلب ملفات فايز
+        uses: actions/checkout@v4
+
+      - name: تشغيل Python
+        run: python3 main.py
