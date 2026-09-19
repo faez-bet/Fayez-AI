@@ -1,17 +1,18 @@
-name: تشغيل فايز
+name: Fayez
 
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
-  تشغيل:
+  run_fayez:
     runs-on: ubuntu-latest
 
     steps:
-      - name: جلب ملفات فايز
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: تشغيل Python
+      - name: Run Python
         run: python3 main.py
